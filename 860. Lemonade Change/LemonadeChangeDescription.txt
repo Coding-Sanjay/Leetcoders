@@ -35,19 +35,26 @@ Explanation:
 
 Code Explanation : 
 
-> Firstly, the customer pays an amount for the lemonade, and we need to give them change. Suppose they pay with $10 or $20 bills. If they pay with $5, there are no issues. However, if they pay with $10, we must give them $5 as change. Similarly, if they pay with $20, we can either give them three $5 bills or one $10 bill and one $5 bill as change.
+> Firstly, the customer pays an amount for the lemonade, and we need to give them change. Suppose they pay with $10 or $20 bills. 
+If they pay with $5, there are no issues. However, if they pay with $10, we must give them $5 as change. 
+Similarly, if they pay with $20, we can either give them three $5 bills or one $10 bill and one $5 bill as change.
 
-> Secondly, to give the correct change to customers, we need to track the count of bills. So, I created the variables amt5Count and amt10Count to store the count of $5 and $10 bills, respectively. You might wonder why I didn’t create a variable to track $20 bills. The reason is that we don’t give $20 bills back as change, so it’s unnecessary to track them.
+> Secondly, to give the correct change to customers, we need to track the count of bills. So, I created the variables amt5Count and 
+amt10Count to store the count of $5 and $10 bills, respectively. You might wonder why I didn’t create a variable to track $20 bills. 
+The reason is that we don’t give $20 bills back as change, so it’s unnecessary to track them.
 
 > Thirdly, I used a for loop to traverse the array bills, checking the amount the customer pays:
 
-    * If they pay $10, we increase the amt10Count by 1. Since we need to give $5 as change, we check if we have a $5 bill available. If we do, we decrease amt5Count by 1. If not, we return false.
+    * If they pay $10, we increase the amt10Count by 1. Since we need to give $5 as change, we check if we have a $5 bill available. 
+    If we do, we decrease amt5Count by 1. If not, we return false.
 
-    * If they pay $20, we check if we have either three $5 bills or one $10 bill and one $5 bill to give as change. If we do, we adjust the counts accordingly; otherwise, we return false.
+    * If they pay $20, we check if we have either three $5 bills or one $10 bill and one $5 bill to give as change. 
+    If we do, we adjust the counts accordingly; otherwise, we return false.
 
     * If they pay $5, we increase the amt5Count by 1.
 
-> Finally, if the entire process completes without returning false, we return true, indicating that we were able to give the correct change back to every customer.
+> Finally, if the entire process completes without returning false, we return true, 
+indicating that we were able to give the correct change back to every customer.
 
 
 
