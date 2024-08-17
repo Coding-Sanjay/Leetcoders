@@ -55,23 +55,3 @@ The reason is that we don’t give $20 bills back as change, so it’s unnecessa
 
 > Finally, if the entire process completes without returning false, we return true, 
 indicating that we were able to give the correct change back to every customer.
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
