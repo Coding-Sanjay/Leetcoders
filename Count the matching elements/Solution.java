@@ -1,7 +1,8 @@
 import java.util.*;
 
 class Main {
-    
+
+    // Brute force
     public static int solution1(int[] arr1, int[] arr2) {
         
         int count = 0;
@@ -17,8 +18,30 @@ class Main {
         
         return count;
     }
-    
-    
+
+    // Traverse arr1 and Binary search in arr2
+    public static int solution2(int[] arr1, int[] arr2) {
+        
+        int count = 0;
+        
+        for (int i = 0; i < arr1.length; i++) {
+            int l = 0;
+            int r = arr2.length - 1;
+            while (l <= r) {
+                int mid = (l + r) / 2;
+                if (arr1[i] == arr2[mid]) {
+                    count += 1;
+                    break;
+                }
+                else if(arr1[i] < arr2[mid]) r = mid - 1;
+                else l = mid + 1;
+            }
+        }
+        
+        return count;
+    }
+
+    // HashMap
     public static int solution3(int[] arr1, int[] arr2) {
         
         int count = 0;
@@ -34,7 +57,8 @@ class Main {
         
         return count;
     }
-    
+
+    // Two pointers
     public static int solution4(int[] arr1, int[] arr2) {
         
         int count = 0;
